@@ -1,0 +1,17 @@
+<div class="body-container">
+
+  <h1>ImageFinder</h1>
+
+  <%= form_with url: "app", class: "keyword-form", method: :get do |form| %>
+    <%= form.label :keywords, "Enter Keywords:" %>
+    <%= form.text_field :keywords, class: "text-field" %>
+    <%= form.submit "Enter", class: "submit-button" %>
+  <% end %>
+
+  <h2>Keywords: <%= @keywords3.titleize %></h2>
+
+    <div class="random-image">
+      <img src="https://source.unsplash.com/1600x900/?<%=@keywords3%>" alt="img">
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+<head>
+
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+  <%= stylesheet_link_tag 'mane1.css' %>
+  <%= stylesheet_link_tag 'mane2.css' %>
+</head>
+<body>
+  <h1 class="heading">Contact Page</h1>
+  <div class="w-layout-grid grid-2">
+  <%= link_to "Home" , root_path , id:"node1b" ,class: "button w-button" %>
+  <%= link_to "Our Apps" , '/apps', id:"node1c" ,class: "button w-button" %>
+  </div> -->
+  <h3 class="heading-2">Hi! Please leave your contact info with us </h3>
+  <h3 class="heading-2">We will connect with you shortly... </h3>
+  
+  <div class="container w-container">
+
+  <%= form_tag(contacts_homepage_path, method: "get") do %>
+    <%= label_tag(:q, "Name:") %>
+    <%= text_field_tag(:name) %>
+    <%= label_tag(:q, "Email:") %>
+    <%= text_field_tag(:email) %>
+    <%= submit_tag("Submit") %>
+  <% end %>
+
+  <h2> <%= @input_statement %> </h2>
+  </div>
+
+  
+    
+  <div class="container w-container"></div>
+  
+</body>

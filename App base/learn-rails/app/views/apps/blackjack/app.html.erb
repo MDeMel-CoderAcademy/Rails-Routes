@@ -1,0 +1,52 @@
+<body class="blackjack">
+    <div class="rules">
+        <h3>Rules:</h3>
+        <ul>
+            <li>Dealer stands on 17+</li>
+            <li>An ace is only worth 11</li>
+        </ul>
+    </div>
+    <h1>Computers Cards:</h1>
+    <div class="card-container">
+        <% session[:compcards].each do |card|%>
+        <div class="card">
+            <h3><%= card["value"].capitalize%> of <%= card["suit"].capitalize%> </h3>
+            <%= image_tag(card["images"]["png"])%>
+        </div>
+        <% end%>
+    </div>
+    <h3>Total: <%= @total_computer%></h3>
+    <% if @total_computer == 21%>
+        <h3>Blackjack!</h3>
+    <% end%>
+
+    <h1>Your Cards:</h1>   
+    <div class="card-container">
+        <% session[:playercards].each do |card|%>
+        <div class="card">
+            <h3><%= card["value"].capitalize%> of <%= card["suit"].capitalize%> </h3>
+            <%= image_tag(card["images"]["png"])%>
+        </div>
+        <% end%>
+    </div>
+    <h3>Total: <%= @total_player%></h3>
+    <% if @total_player == 21%>
+        <h3>Blackjack! You Win!</h3>
+    <% elsif @total_player > 21%>
+        <h3>You Lose!</h3>
+    <% elsif @total_computer == 21%>
+        <h3>You Lose!</h3>
+    <% elsif @total_computer > 21%>
+        <h3>You Win!</h3>
+    <% elsif @total_computer >= 17%>
+        <h3><%=@outcome%></h3>
+    <% else%>
+        <%= form_with url: "/blackjack/app", method: :get do |form| %>
+            <%= form.button :Hit, name: "hit", value: true %>
+            <%= form.button :Stay, name: "stay", value: true %>
+        <% end%>
+    <% end%>
+    <%= form_with url: "/blackjack/app", method: :get do |form| %>
+        <%= form.button :Restart, name: "restart", value: true%>
+    <%end%>
+</body>

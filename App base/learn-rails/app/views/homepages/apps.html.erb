@@ -1,0 +1,63 @@
+<head>
+  <meta charset="utf-8">
+  <title>Apps</title>
+  <%= stylesheet_link_tag 'mane1.css' %>
+  <%= stylesheet_link_tag 'mane2.css' %>
+</head>
+<body class="body">
+  <!-- <h1 class="heading">Let&#x27;s Learn Rails</h1>
+  <div class="w-layout-grid grid-2">
+  <%= link_to "Home" , root_path , id:"node1b" ,class: "button w-button" %>
+  <%= link_to "Contact Us" , '/contacts' , id:"node1c" ,class: "button w-button" %>
+  </div> -->
+  <div class="w-row" style = "margin: 50px">
+    <div class="basic-column w-col w-col-4 w-col-stack">
+      <div class="tag-wrapper">
+        <div class="product-card">
+          <div class="product-card-image product-card-1"></div>
+          <div class="product-card-description">
+            <div>
+              <div class="tagline tagline-promo-40">Acronym Maker</div>
+              <h3 class="product-name-title">creates Acronyms for you.<span class="text-span"></span></h3>
+            </div>
+            <div class="price-wrapper"></div>
+            <%= link_to "Select" , acronyms_app_path  , class:"button-2 w-button" %>
+          </div>
+        </div>
+      </div>
+      <u style="color: white"><p style="color: white ; margin-left: 10px ; font-family: Lucida Console;"> Educator General - Melb flex </p></u>
+    </div>
+    <div class="basic-column w-col w-col-4 w-col-stack">
+      <div class="tag-wrapper">
+        <div class="product-card">
+          <div class="product-card-image product-card-2"></div>
+          <div class="product-card-description">
+            <div>
+              <div class="tagline tagline-promo-40">Image Finder</div>
+              <h3 class="product-name-title">Type in a tag to find image</h3>
+            </div>
+            <div class="price-wrapper"></div>
+<a href=<%= imagefinder_app_path %> class="button-2 w-button">Select</a>
+          </div>
+        </div>
+      </div>
+      <u style="color: white"><p style="color: white ; margin-left: 10px ; font-family: Lucida Console;"> Daniel Hinton - Melb flex </p></u>
+    </div>
+    <div class="basic-column w-col w-col-4 w-col-stack">
+      <div class="tag-wrapper">
+        <div class="product-card">
+          <div class="product-card-image product-card-3"></div>
+          <div class="product-card-description">
+            <div>
+              <div class="tagline tagline-promo-40">Blackjack</div>
+              <h3 class="product-name-title">Blackjack simulator</h3>
+            </div>
+            <div class="price-wrapper"></div>
+            <%= link_to "Select" , blackjack_app_path  , class:"button-2 w-button" %>
+          </div>
+        </div>
+      </div>
+      <u style="color: white"><p style="color: white ; margin-left: 10px ; font-family: Lucida Console;"> Daniel Walters - Melb flex </p></u>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <%= stylesheet_link_tag 'mane1.css' %>
+  <%= stylesheet_link_tag 'mane2.css' %>
+</head>
+<body>
+  <!--<h1 class="heading">Let&#x27;s Learn Rails</h1>
+  <div class="w-layout-grid grid-2">
+  <%= link_to "Our Apps" , 'homepage/apps', id:"node1b" ,class: "button w-button" %>
+  <%= link_to "Contact Us" , 'homepage/contacts' , id:"node1c" ,class: "button w-button" %>
+    
+  </div> -->
+  <h2 class="heading-2">Welcome<br> to your first &#x27;Rails&#x27; website</h2>
+  <div class="container w-container"></div>
+  <div class="columns w-row">
+    <div class="w-col w-col-6">
+      <p class="paragraph">Today we will learn...</p>
+    </div>
+    <% if @show %>
+    <div class="w-col w-col-6">
+      <ul role="list" class="list-2">
+       <% @topics.each do |topic| %> 
+        <li class="list-item"> <%= topic  %> </li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+  </div>
+</body>

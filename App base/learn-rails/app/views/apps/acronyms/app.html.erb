@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<head>
+
+  <meta charset="utf-8">
+  <title>Acronym App</title>
+  <%= stylesheet_link_tag 'mane1.css' %>
+  <%= stylesheet_link_tag 'mane2.css' %>
+</head>
+<body>
+
+<div class="container w-container">
+
+
+
+<center>
+<%= link_to "Home" , root_path , id:"node1b" ,class: "button w-button" %>
+</br>
+</br>
+<h1>Acronyms app</h1>
+</br>
+
+
+        <%= form_tag("/acronyms/app", method: "get") do %>
+
+          <%= label_tag(:phrase, "Phrase:") %>
+          <%= text_field_tag(:phrase) %>
+          </br>
+          <%= label_tag(:rs, "Result:") %>
+          <input type="text" id="rs" name="rs" value="<%= @result %>" readonly>
+          </br>
+          <%= submit_tag("Search") %>
+          
+          
+        <% end %>
+       
+        
+      
+        </center></div>
+
+  
+</body>
+</html>
+
+
+
+
+     
+
+      
+
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LearnRails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <h1 class="heading">Let&#x27;s Learn Rails</h1>
+  <div class="w-layout-grid grid-2">
+  <%= link_to "Our Apps" , apps_homepage_path , id:"node1b" ,class: "button w-button" %>
+  <%= link_to "Contact Us" , contacts_homepage_path , id:"node1c" ,class: "button w-button" %>
+    
+  </div>
+    <%= yield %>
+  </body>
+</html>
