@@ -1,0 +1,5 @@
+https://www.aisangam.com/blog/http-request-message-format-well-explained/
+
+https://guides.rubyonrails.org/v2.3/routing.html
+
+https://edgeguides.rubyonrails.org/routing.html#connecting-urls-to-code
