@@ -44,10 +44,9 @@ Let's take an extended look at what the HTTP [Request Headers] contain,</br>
 
 The content type header (in http response headers) is what tells your browser the type of content that is being carried in the response. These content types are expressed as Multipurpose Internet Mail Extensions [MIME] types
 
-The basic structure of a MIME type is a general type, the general type for text has several specific types, for plain text, HTML text and style sheet text. These types are represented as text/plain, text/html and text/css, respectively
+The basic structure of a MIME type is a general type and a subtype (type/subtype), the general type for text has several specific types, for plain text, HTML text and style sheet text. These types are represented as text/plain, text/html and text/css, respectively
 
-The most common content type on the web is HTML text, represented as the
-MIME type text/html.</br> These MIME Types are important moving forward with ' Controllers ' and ' Views '.
+The most common content type on the web is HTML text, represented as the MIME type text/html.</br> These MIME Types are important moving forward with ' Controllers ' and ' Views '.
 
 ## What are Routes ?
 
